@@ -10,14 +10,14 @@ oc expose svc caravel
 ```
 oc run mysql \
 --image registry.dataos.io/library/mysql \
---env MYSQL_ROOT_PASSWORD=my-secret-pw \
+--env MYSQL_ALLOW_EMPTY_PASSWORD='yes' \
 --env MYSQL_DATABASE=demo 
 oc expose dc mysql --port=3306
 ```
 
 ###  绑定caravel到mysql
 ```
-oc env dc/caravel DBBSI=MYSQL,BSI_MYSQL_URI=mysql://root:my-secret-pw@mysql:3306/demo
+oc env dc/caravel DBBSI=MYSQL,BSI_MYSQL_URI=mysql://mysql:3306/demo
 ```
 
 ### 使用浏览器查看数据
