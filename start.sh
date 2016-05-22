@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ ${DBBSI} ]]; then
-    eval SQLALCHEMY_DATABASE_URI=\$BSI_${SPARKBSI}_URI
+    eval SQLALCHEMY_DATABASE_URI=\$BSI_${DBBSI}_URI
     export SQLALCHEMY_DATABASE_URI
     /usr/local/bin/fabmanager create-admin --app caravel < admin.config
     caravel db upgrade
