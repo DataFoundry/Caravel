@@ -3,6 +3,7 @@
 ###  构建并运行caravel
 ```
 oc new-app https://github.com/datafoundry/caravel.git
+oc expose svc caravel
 ```
 
 ### 运行mysql
