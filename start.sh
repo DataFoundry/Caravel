@@ -5,7 +5,7 @@ if [[ ${DBBSI} ]]; then
     /usr/local/bin/fabmanager create-admin --app caravel < admin.config
     caravel db upgrade
     caravel init
-    caravel load_examples
+    #caravel load_examples
 fi
 
 caravel runserver -d
