@@ -34,6 +34,6 @@ EXPOSE 8088
 WORKDIR /home/caravel
 
 ADD . /home/caravel
-RUN chmod +x start.sh
+RUN chmod +x /home/caravel/start.sh
 
-CMD start.sh
+CMD /home/caravel/start.sh
