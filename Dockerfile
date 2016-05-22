@@ -37,6 +37,6 @@ USER caravel
 
 WORKDIR /home/caravel
 
-COPY caravel /home/caravel
+ADD . /home/caravel
 
 CMD start.sh
