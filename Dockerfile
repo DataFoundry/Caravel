@@ -36,5 +36,6 @@ USER caravel
 WORKDIR /home/caravel
 
 ADD . /home/caravel
+RUN chmod +x start.sh
 
 CMD start.sh
