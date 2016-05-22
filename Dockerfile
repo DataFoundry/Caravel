@@ -1,7 +1,8 @@
 FROM library/ubuntu:14.04
 
 # Setup
-RUN apt-get update && \
+RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirrors.aliyun.com/g" /etc/apt/sources.list && \
+    apt-get update && \
     apt-get install -y build-essential libssl-dev libffi-dev python-dev python-pip
 
 # Pandas
@@ -29,9 +30,6 @@ ENV ROW_LIMIT=5000 \
     PYTHONPATH=/home/caravel/caravel_config.py:$PYTHONPATH
 
 EXPOSE 8088
-
-RUN useradd -b /home -m -U caravel
-USER caravel
 
 WORKDIR /home/caravel
 
