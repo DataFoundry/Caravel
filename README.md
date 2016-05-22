@@ -1,21 +1,3 @@
-# 使用airbnb caravel进行数据可视化
+# My Awesome Book
 
-###  构建并运行caravel
-```
-oc new-app https://github.com/datafoundry/caravel.git
-oc expose svc caravel
-```
-
-### 运行mysql
-```
-oc run mysql \
---image registry.dataos.io/library/mysql \
---env MYSQL_ROOT_PASSWORD=my-secret-pw
---env MYSQL_DATABASE=demo
-oc expose dc mysql --port=3306
-```
-
-###  绑定caravel到mysql
-```
-oc env dc/caravel DBBSI="mysql://root:my-secret-pw@mysql:3306/demo"
-```
+This file file serves as your book's preface, a great place to describe your book's content and ideas.
