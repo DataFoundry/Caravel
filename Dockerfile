@@ -1,9 +1,7 @@
-FROM ubuntu:14.04
-MAINTAINER amancevice@cargometrics.com
+FROM library/ubuntu:14.04
 
 # Setup
-RUN echo as of 2016-05-10 && \
-    apt-get update && \
+RUN apt-get update && \
     apt-get install -y build-essential libssl-dev libffi-dev python-dev python-pip
 
 # Pandas
