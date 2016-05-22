@@ -17,7 +17,7 @@ oc expose dc mysql --port=3306
 
 ###  绑定caravel到mysql
 ```
-oc env dc/caravel DBBSI="mysql://root:my-secret-pw@mysql:3306/demo"
+oc env dc/caravel DBBSI=MYSQL,BSI_MYSQL_URI=mysql://root:my-secret-pw@mysql:3306/demo
 ```
 
 ### 使用浏览器查看数据
