@@ -6,7 +6,7 @@ RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirrors.aliyun.com/g" /etc/ap
     apt-get install -y build-essential libssl-dev libffi-dev python-dev python-pip
 
 # Pandas
-RUN pip install pandas==0.18.0
+RUN pip install pandas==0.18.0 -i http://mirrors.aliyun.com/pypi/simple
 
 # MySQL
 RUN apt-get install -y libmysqlclient-dev && pip install mysqlclient==1.3.7 -i http://mirrors.aliyun.com/pypi/simple
