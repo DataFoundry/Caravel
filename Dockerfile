@@ -18,7 +18,7 @@ RUN apt-get build-dep -y psycopg2 && pip install psycopg2==2.6.1 -i http://mirro
 RUN pip install sqlalchemy-redshift==0.5.0 -i http://mirrors.aliyun.com/pypi/simple
 
 # Caravel
-RUN pip install caravel==0.9.0 -i http://mirrors.aliyun.com/pypi/simple
+RUN pip install caravel==0.10.0 -i http://mirrors.aliyun.com/pypi/simple
 
 # Default config
 ENV ROW_LIMIT=5000 \
